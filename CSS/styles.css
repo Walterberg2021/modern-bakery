@@ -37,12 +37,21 @@
     --color-dark: #31261A;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     color: var(--color-dark);
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
+    margin: 0px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
 }
 
 address {
@@ -51,6 +60,26 @@ address {
 
 ul {
     list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1088px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.section{
+    padding: 48px 0;
 }
 
 /* button */
@@ -81,7 +110,13 @@ ul {
     font-weight: 600;
 }
 
+/* main header */
+.hero-section {
+    padding: 272px 0;
+}
+
 .main-header {
+    margin-bottom: 0;
     color: var(--color-light);
     text-align: center;
     font-size: 128px;
@@ -113,6 +148,14 @@ ul {
     font-weight: 300;
 }
 
+.traditions {
+    padding-top: 96px;
+}
+
+.traditions-title {
+    margin-bottom: 42px;
+}
+
 .section-title{
     font-weight: 900;
     font-size: 64px;
@@ -130,6 +173,10 @@ ul {
     font-weight: 600;
 }
 
+.chef-title-h2 {
+    margin-bottom: 80px;
+}
+
 /* format section */
 .format-card-title {
     font-size: 24px;
@@ -138,6 +185,14 @@ ul {
 .format-card-text {
     font-size: 14px;
     font: 300;
+}
+
+.format-section {
+    margin-bottom: 80px;
+}
+
+.contact-section {
+    margin-bottom: 16px;
 }
 
 /* footer */
