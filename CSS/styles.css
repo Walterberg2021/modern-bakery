@@ -39,7 +39,9 @@
     --color-chef-outline: #A18268;
 }
 
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
@@ -49,12 +51,16 @@ body {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
-    margin: 0px;
+    margin: 0;
     background-color: var(--color-light);
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
+}
+
+a {
+    display: inline-block;
 }
 
 address {
@@ -253,9 +259,32 @@ header {
     content: '';
 }
 
+.chef-list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.chef-card {
+    display: flex;
+    gap: 30px;
+}
+
+.chef-item {
+    flex-basis: calc((100% - 30px) / 2);
+}
+
 .chef-img {
     border-radius: 4px 4px 4px 200px;
     box-shadow: -16px 16px 0 0 var(--color-light), -16px 16px 0 2px var(--color-chef-outline);
+}
+
+.chef-text p {
+    margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+    margin-bottom: 0;
 }
 
 /* format section */
@@ -294,6 +323,12 @@ background: linear-gradient(180deg,
     margin-bottom: 80px;
 }
 
+.format-container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
 .carousel-button {
     width: 44px;
     height: 44px;
@@ -306,12 +341,28 @@ background: linear-gradient(180deg,
     justify-content: center;
     cursor: pointer;
     fill: var(--color-dark);
+    flex-shrink: 0;
 }
 
 .carousel-button:hover {
     background-color: var(--color-dark);
     fill: var(--color-light);
 
+}
+
+.contact-section-main {
+    padding-bottom: 96px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
+
+.contact-map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
 }
 
 .contact-section {
@@ -333,6 +384,7 @@ background: linear-gradient(180deg,
 
 .address-copyright {
     font-size: 14px;
+    color: var(--color-chef-outline);
 }
 
 .social-icon {
@@ -349,4 +401,29 @@ background: linear-gradient(180deg,
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 32px 0;
+}
+
+.footer-container {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+    flex-basis: 50%;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-logo-div, 
+.footer-menu {
+    flex-grow: 1;
+    flex-basis: 50%;
+}
+
+.address-list,
+.address-info {
+    flex-grow: 1;
+    flex-basis: 50%;
 }
