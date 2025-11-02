@@ -502,6 +502,8 @@ header {
     max-height: 880px;
     background-color: var(--color-light);
     border-radius: 32px;
+    padding: 128px;
+    overflow-y: auto;
 
 }
 .modal-btn-close {
@@ -514,4 +516,57 @@ header {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+/* Form */
+.form-input {
+    padding: 16px 42px;
+    width: 100%;
+    border: 1px solid var(--color-chef-outline);
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+.form-input:focus {
+    border-color: var(--color-brand);
+    outline: none;
+}
+
+.form-label {
+    position: absolute;
+    left: 42px;
+    top: 16px;
+    font-size: 16px;
+    line-height: 1.17;
+    color: var(--color-chef-outline);
+    transition: transform 0.3s;
+}
+
+.form-input:focus + .form-label {
+    transform: translate(-36px, -40px);
+}
+
+.form-field {
+    margin-bottom: 32px;
+    position: relative;
+    
+}
+
+.order-button {
+    margin: 0 auto 24px;
+    display: block;
+}
+
+.form-terms {
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: center;
+    max-width: 213px;
+    margin: 0 auto;
+}
+
+.form-terms-link {
+    color: var(--color-dark);
+    text-underline-offset: 2px;
 }
