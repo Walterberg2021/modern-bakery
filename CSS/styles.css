@@ -540,6 +540,7 @@ header {
     line-height: 1.17;
     color: var(--color-chef-outline);
     transition: transform 0.3s;
+    pointer-events: none;
 }
 
 .form-input:focus + .form-label {
