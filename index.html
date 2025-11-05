@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сучасна пекарня</title>
-    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="./CSS/main.min.css" />
   </head>
   <body>
     <header>
@@ -138,6 +138,11 @@
             <ul class="format-list">
               <li class="format-card-li">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./imgs/walrus-format.jpg"
+                    alt="Walrus format"
+                  />
                   <h3 class="format-card-title" lang="en">Walrus</h3>
                   <div class="format-card-text">
                     <p>Площа: до 120 м2</p>
@@ -152,6 +157,11 @@
               </li>
               <li class="format-card-li">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./imgs/horseshoe-format.jpg"
+                    alt="Horseshoe format"
+                  />
                   <h3 class="format-card-title" lang="en">Horseshoe</h3>
                   <div class="format-card-text">
                     <p>Площа: до 25 м2</p>
@@ -163,6 +173,11 @@
               </li>
               <li class="format-card-li">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./imgs/hendlebar-format.jpg"
+                    alt="Handlebar format"
+                  />
                   <h3 class="format-card-title" lang="en">Handlebar</h3>
                   <div class="format-card-text">
                     <p>Площа: до 15 м2</p>
@@ -313,13 +328,14 @@
         <button class="modal-btn-close" type="button">Close</button>
         <h2>Замовити дзвінок</h2>
         <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-        <form name="modal-form" autocomplete="off" novalidate>
+        <form name="modal-form" autocomplete="off">
           <div class="form-field">
             <input
               class="form-input"
               type="text"
               name="user-name"
               id="user-name"
+              required
             />
             <label class="form-label" for="user-name">Ім'я</label>
           </div>
@@ -330,18 +346,37 @@
               type="tel"
               name="telephone"
               id="telephone"
+              required
             />
             <label class="form-label" for="telephone">Телефон</label>
           </div>
 
           <div class="form-field">
-            <input class="form-input" type="email" name="mail" id="mail" />
+            <input
+              class="form-input"
+              type="email"
+              name="mail"
+              id="mail"
+              required
+            />
             <label class="form-label" for="mail">Електронна пошта</label>
           </div>
 
           <button type="submit" class="main-button order-button">
             Замовити дзвінок
           </button>
+
+          <!-- <div class="checkbox">
+            <input
+              class="checkbox-input"
+              type="checkbox"
+              id="terms-conditions"
+              name="terms-conditions"
+            />
+            <label class="checkbox-label" for="terms-conditions"
+              >Я погоджуюся з політикою конфіденційності</label
+            >
+          </div> -->
 
           <p class="form-terms">
             Натискаючи на кнопку я погоджуюсь з

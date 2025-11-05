@@ -1,77 +1,18 @@
-@font-face {
-    font-display: swap;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 300;
-    src: url('../fonts/poppins-v24-latin-300.woff2') format('woff2');
-}
+@import './utils/fonst';
 
-@font-face {
-    font-display: swap;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/poppins-v24-latin-regular.woff2') format('woff2');
-}
+@import './utils/variables';
 
-@font-face {
-    font-display: swap;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    src: url('../fonts/poppins-v24-latin-600.woff2') format('woff2');
-}
+@import './base';
 
-@font-face {
-    font-display: swap;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../fonts/poppins-v24-latin-900.woff2') format('woff2');
-}
+@import './utils/utils';
 
-:root {
-    --color-brand: #809b57;
-    --color-brand-light: #cfbcbc;
-    --color-brand-dark: #465929;
-    --color-light: #FAF4EA;
-    --color-dark: #31261A;
-    --color-chef-outline: #A18268;
-}
+@import './components/buttons';
 
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-}
+@import './components/links';
 
-body {
-    color: var(--color-dark);
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
-    background-color: var(--color-light);
-}
+@import './components/header';
 
-h1, h2, h3, h4, h5, h6, p {
-    margin-top: 0;
-}
-
-a {
-    display: inline-block;
-}
-
-address {
-    font-style: normal;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+@import './components/hero-section';
 
 .container {
     width: 100%;
@@ -80,106 +21,8 @@ ul {
     padding: 16px;
 }
 
-.visually-hidden {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-
-header {
-    /* background-color: #31261A; */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-top: 32px;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.header-nav {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    gap: 40px;
-}
-
-.header-menu {
-    display: flex;
-    flex-grow: 1;
-    gap: 64px;
-    justify-content: center;
-}
-
-
-.section{
+.section {
     padding: 48px 0;
-}
-
-/* button */
-.main-button {
-    padding: 16px 32px;
-    color: var(--color-light);
-    background-color:var(--color-brand);
-    border: 2px solid;
-    border-radius: 8px;
-    border-color: var(--color-brand);
-    cursor: pointer;
-    font-weight: 600;
-    transition: color 0.3s;
-    transition: background-color 0.3s;
-}
-
-.main-button:hover {
-   background-color: transparent; 
-   color: var(--color-brand-dark);
-}
-
-/* link */
-.link {
-    color: var(--color-light);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.link:hover {
-    color: var(--color-brand);
-    text-decoration: none;
-    /* font-weight: 600; */
-}
-
-/* main header */
-.hero-section {
-    padding: 272px 0;
-    background-image: linear-gradient(
-            rgba(18, 18, 17, 0.78) 2.03%,
-            rgba(18, 18, 17, 0.6) 58.46%,
-            rgba(18, 18, 17, 0) 90.36%
-        ), 
-        url(../imgs/hero-background.jpg);
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.main-header {
-    margin-bottom: 0;
-    color: var(--color-light);
-    text-align: center;
-    font-size: 128px;
-    font-weight: 900;
-}
-
-.accent {
-    color: var(--color-brand);
 }
 
 .accent-normal {
@@ -204,6 +47,7 @@ header {
     justify-content: space-between;
     gap: 40px;
 }
+
 .advantages-item {
     color: var(--color-light);
     font-size: 20px;
@@ -308,18 +152,22 @@ header {
 .format-card-text {
     font-size: 14px;
     font: 300;
+    color: var(--color-light);
 }
 
 .format-card {
     height: 444px;
-    border: 1px solid lightgray;
     border-radius: 16px;
     padding: 24px;
     background: linear-gradient(180deg,
-  rgba(49, 38, 26, 0) 55%,
-  rgba(49, 38, 26, 0.71) 73%,
-    var(--color-dark) 100%);
+            rgba(49, 38, 26, 0) 55%,
+            rgba(49, 38, 26, 0.71) 73%,
+            var(--color-dark) 100%);
     transition: transform 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 .format-card:hover {
@@ -337,6 +185,7 @@ header {
 }
 
 .format-card-title {
+    color: var(--color-light);
     font-size: 24px;
     font-weight: 600;
 }
@@ -349,6 +198,15 @@ header {
     display: flex;
     gap: 32px;
     align-items: center;
+}
+
+.format-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .carousel-button {
@@ -397,7 +255,7 @@ header {
 }
 
 /* footer */
-.address-link{
+.address-link {
     font-size: 16px;
     font-weight: 300;
     color: var(--color-light);
@@ -445,7 +303,7 @@ header {
     gap: 20px;
 }
 
-.footer-logo-div, 
+.footer-logo-div,
 .footer-menu {
     flex-grow: 1;
     flex-basis: 50%;
@@ -506,6 +364,7 @@ header {
     overflow-y: auto;
 
 }
+
 .modal-btn-close {
     position: absolute;
     top: 40px;
@@ -543,20 +402,48 @@ header {
     pointer-events: none;
 }
 
-.form-input:focus + .form-label {
+.form-input:focus+.form-label {
     transform: translate(-36px, -40px);
 }
 
 .form-field {
     margin-bottom: 32px;
     position: relative;
-    
+
 }
 
 .order-button {
     margin: 0 auto 24px;
     display: block;
 }
+
+/* .checkbox{
+    position: relative;
+}
+
+.checkbox-input {
+    appearance: none;
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+    background-color: green;
+}
+
+.checkbox-label {
+    padding-left: 10px;
+}
+
+.checkbox-label::before {
+    width: 16px;
+    height: 16px;
+    content: '';
+    border: 2px solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 4px;
+    border-radius: 3px;
+} */
 
 .form-terms {
     font-size: 12px;
