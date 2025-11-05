@@ -1,0 +1,32 @@
+.accent-normal {
+    color: var(--color-brand);
+    font-weight: 600;
+}
+
+.accent-upp {
+    color: var(--color-brand);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.traditions {
+    padding-top: 96px;
+}
+
+.traditions-text {
+    max-width: 710;
+}
+
+.traditions-text:nth-child(3) {
+    max-width: 340;
+}
+
+.tradition-flex {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.traditions-title {
+    margin-bottom: 42px;
+}
