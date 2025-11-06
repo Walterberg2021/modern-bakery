@@ -10,7 +10,7 @@
 
 @import './components/links';
 
-@import './components/header';
+@import './layouts/header';
 
 @import './layouts/hero-section';
 
@@ -28,4 +28,12 @@
 
 @import './layouts/modal';
 
-@import './components/form'
+@import './components/form';
+
+@import './utils/texts';
+
+@import './components/section';
+
+@import './layouts/format';
+
+@import './components/cef-card';
