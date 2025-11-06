@@ -1,0 +1,39 @@
+.format-card {
+    height: 444px;
+    border-radius: 16px;
+    padding: 24px;
+    background: linear-gradient(180deg,
+            rgba(49, 38, 26, 0) 55%,
+            rgba(49, 38, 26, 0.71) 73%,
+            var(--color-dark) 100%);
+    transition: transform 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &__title {
+        color: var(--color-light);
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    &__text {
+        font-size: 14px;
+        font: 300;
+        color: var(--color-light);
+    }
+}
